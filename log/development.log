@@ -634,3 +634,18 @@ AbstractController::ActionNotFound (The action 'update' could not be found for P
 
 
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.0ms)
+
+
+Started PATCH "/posts/2" for 200.113.234.33 at 2019-01-04 07:02:01 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mmIhZ0yDkkYvjEMJqCiXvoy3IEYPyjuFUyNxDKk1jydVwo6ZJCF3NrT+mY6K517dBGrXhQkrzO65SERxATjl5w==", "post"=>{"title"=>"Rails Introduction bbb", "description"=>"asdfasdf"}, "commit"=>"Submit Article", "id"=>"2"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+RuntimeError ({"utf8"=>"✓", "_method"=>"patch", "authenticity_token"=>"mmIhZ0yDkkYvjEMJqCiXvoy3IEYPyjuFUyNxDKk1jydVwo6ZJCF3NrT+mY6K517dBGrXhQkrzO65SERxATjl5w==", "post"=>{"title"=>"Rails Introduction bbb", "description"=>"asdfasdf"}, "commit"=>"Submit Article", "controller"=>"posts", "action"=>"update", "id"=>"2"}):
+  app/controllers/posts_controller.rb:19:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.1ms)
