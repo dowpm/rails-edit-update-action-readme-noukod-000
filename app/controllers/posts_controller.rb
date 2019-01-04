@@ -16,7 +16,8 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		@article = Article.find(params[:id])
+		raise params.inspect
+		@article = Post.find(params[:id])
 		@article.update(title: params[:title], description: params[:description])
 		redirect_to article_path(@article)
 	end
